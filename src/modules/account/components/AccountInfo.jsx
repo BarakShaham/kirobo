@@ -7,9 +7,7 @@ import { Button, Text, FlexCol } from '../../../ui/Layouts';
 const Container = styled(FlexCol)`
   margin-top: 20px;
 `;
-const Wrapper = styled.div`
-  text-align: left;
-`;
+const Wrapper = styled.div``;
 const Adrress = styled(Text)``;
 const Balance = styled(Text)``;
 const GenerateBtn = styled(Button)`
@@ -17,12 +15,7 @@ const GenerateBtn = styled(Button)`
   font-size: 14px;
 `;
 
-export const GenerateAccount = ({
-  generateSeed,
-  account,
-  balance,
-  getBalance,
-}) => {
+export const AccountInfo = ({ generateSeed, account, balance, getBalance }) => {
   const mnemonic = useRecoilValue(mnemonicState);
 
   const generate = useCallback(() => {
